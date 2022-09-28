@@ -13,18 +13,18 @@ env:
   PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   SAM_TEMPLATE: template.yaml
-  TESTING_STACK_NAME: sam-pipelines-dev
-  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::461008062923:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-A62NCI4UYXIJ
-  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::461008062923:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-15BS9TC8HF1UV
-  TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-artifactsbucket-9htbrq6euslf
-  TESTING_IMAGE_REPOSITORY: 461008062923.dkr.ecr.us-east-1.amazonaws.com/aws-sam-cli-managed-dev-pipeline-resources-imagerepository-o1vxtbrkzjrp
+  TESTING_STACK_NAME: sam-app
+  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::461008062923:role/aws-sam-cli-managed-prod-pip-PipelineExecutionRole-1WHJ0ORJATCXZ
+  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::461008062923:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-1SVAFTANYYNA4
+  TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-prod-pipeline-artifactsbucket-1p06d7quijjk2
+  TESTING_IMAGE_REPOSITORY: 461008062923.dkr.ecr.us-east-1.amazonaws.com/aws-sam-cli-managed-prod-pipeline-resources-imagerepository-iba5kiaadmgb
   TESTING_REGION: us-east-1
-  PROD_STACK_NAME: sam-pipelines-prod
-  PROD_PIPELINE_EXECUTION_ROLE: sam-pipelines-prod
-  PROD_CLOUDFORMATION_EXECUTION_ROLE: a
-  PROD_ARTIFACTS_BUCKET: a
-  PROD_IMAGE_REPOSITORY: a
-  PROD_REGION: a
+  PROD_STACK_NAME: sam-app
+  PROD_PIPELINE_EXECUTION_ROLE: arn:aws:iam::461008062923:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-A62NCI4UYXIJ
+  PROD_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::461008062923:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-15BS9TC8HF1UV
+  PROD_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-artifactsbucket-9htbrq6euslf
+  PROD_IMAGE_REPOSITORY: 461008062923.dkr.ecr.us-east-1.amazonaws.com/aws-sam-cli-managed-dev-pipeline-resources-imagerepository-o1vxtbrkzjrp
+  PROD_REGION: us-east-1
 
 jobs:
   test:

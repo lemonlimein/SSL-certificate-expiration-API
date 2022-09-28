@@ -17,6 +17,6 @@ def lambda_handler(event, context):
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "SSL Expiration Date of "+ siteId: date  ,
+            "--SSL Expiration Date of "+ siteId: date  ,
         }),
     }
