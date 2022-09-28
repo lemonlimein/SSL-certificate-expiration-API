@@ -4,26 +4,26 @@ Description: >
   sam-app
 
 Resources:
-  HelloWorldFunction:
+  SSLCertFunction:
     Type: AWS::Serverless::Function 
     Properties:
-      CodeUri: hello_world/
+      CodeUri: ssl_cert/
       Handler: app.lambda_handler
       Runtime: python3.8
       Events:
-        HelloWorld:
+        SSLCert:
           Type: Api 
           Properties:
-            Path: /helloWorld
+            Path: /site
             Method: get
 
 Outputs:
-  HelloWorldApi:
-    Description: "API Gateway endpoint URL for Prod stage for Hello World function"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
-  HelloWorldFunction:
-    Description: "Hello World Lambda Function ARN"
-    Value: !GetAtt HelloWorldFunction.Arn
-  HelloWorldFunctionIamRole:
-    Description: "Implicit IAM Role created for Hello World function"
-    Value: !GetAtt HelloWorldFunctionRole.Arn
+  SSLCertApi:
+    Description: "API Gateway endpoint URL for Prod stage for SSLCert function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/ssl_cert/"
+  SSLCertFunction:
+    Description: "SSLCert Lambda Function ARN"
+    Value: !GetAtt SSLCertFunction.Arn
+  SSLCertFunctionIamRole:
+    Description: "Implicit IAM Role created for SSLCert function"
+    Value: !GetAtt SSLCertFunctionRole.Arn
